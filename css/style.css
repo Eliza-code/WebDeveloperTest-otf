@@ -1,0 +1,27 @@
+/* GLOBAL       */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+header{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+}
