@@ -1,27 +1,224 @@
 /* GLOBAL       */
 
-*{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(
+    130deg,
+    rgba(48, 48, 48, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
+}
+
+@font-face {
+  font-family: AvenirNextLTProBold;
+  src: url("../fonts/AvenirNextLTProBold.otf");
+}
+
+@font-face {
+  font-family: AvenirNextLTProRegular;
+  src: url("../fonts/AvenirNextLTProRegular.otf");
+}
+
+h2 {
+  font-family: AvenirNextLTProBold;
+  font-size: 56px;
+}
+
+h3 {
+  font-family: AvenirNextLTProBold;
+  font-size: 36px;
+  color: #ac5a5a;
+}
+h5 {
+    font-family: AvenirNextLTProBold;
+    font-size: 25px;
+    color: black;
+  }
+
+p {
+  font-family: AvenirNextLTProRegular;
+  font-size: 14px;
+}
+.subtitle{
+    color: #828282;
+}
+.paragraph{
+    color: #6A6A6A;
+}
+
+.card {
+  padding: 70px 20px 30px 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#images-background {
+  background: url("../img/backgrounizq.png") left -20% no-repeat,
+    url("../img//Framecenter.png") 70% -2% no-repeat,
+    url("../img/homepageder.png") right no-repeat;
+}
+
+#logo {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  /* height: 70.39px; */
+  padding-top: 60px;
+}
+
+.submit-btn {
+  background-color: #a288a8;
+  color: white;
+  width: 200px;
+}
+
+#section-hero {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#divider-img {
+  /* position: absolute; */
+  width: 40%;
+  height: 50px;
+  margin-left: 10%;
+  background: url("../img/divider.png") no-repeat;
+}
+#divider-img2 {
+    /* position: absolute; */
+    width: 40%;
+    height: 70px;
+    margin-left: 60%;
+    background: url("../img/divider.png") no-repeat;
+  }
+
+.white-btn {
+  background-color: white;
+  border: 1px solid #a288a8;
+  color: #a288a8;
+  width: 200px;
+}
+
+#section2 {
+  background: url("../img/lines.png") 100% 70% no-repeat;
+  background-color: #fafafa;
+}
+
+#imagessection3 {
+  background: url("../img/leftpoints.png") left no-repeat,
+    url("../img/bigcity.png") right no-repeat,
+    url("../img/rigthpoints.png") right no-repeat;
+}
+
+#cityfooter {
+  background: url("../img/cityfooter.png") no-repeat;
+  width: 100%;
+  height: 190px;
+ 
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+#imagefooter{
+  width: 100%;
+  height: 80px;
+  background: url("../img/verticalline.png") center no-repeat;
+  mix-blend-mode: darken;
+}
+
+.fa {
+  padding-top: 2px; 
+  font-size: 50px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: white;
+  color: black;
+}
+
+.fa-linkedin {
+  background: black;
+  color: white;
+}
+
+.fa-youtube {
+  background: white;
+  color: black;
+}
+
+.popup-wrapper {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 
+/* Animation  */
 
-header{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-    justify-content: center;
-    background-color: black;
-    color: white;
+#meeting-img:hover img {
+	transform: scale(1.1);
 }
 
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
 
-footer{
-    background-color: black;
-    color: white;
+/* Scroll with Observer */
+.card {
+  animation: animCard 2s;
+}
+
+@keyframes animCard {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
